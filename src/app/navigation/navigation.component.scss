@@ -1,3 +1,47 @@
-:host {
+@import '../../colors.scss';
 
+:host {
+  .menu_toggle {
+    z-index: 900;
+    position: fixed;
+    display: block;
+    cursor: pointer;
+    width: 100px;
+    height: 80px;
+    background-color: $red;
+    border-bottom-right-radius: 100%;
+
+    .menu_button {
+      position: absolute;
+      top: 40%;
+      left: 40%;
+      margin-top: -15px;
+      margin-left: -12px;
+
+      &.menu_open {
+        transform-origin: -100px -100px;
+      }
+
+      &.menu_close {
+        transform-origin: 100px 160px;
+      }
+    }
+  }
+
+  .menu_items {
+    position: fixed;
+    bottom: 0;
+    left: 20px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      height: 30px;
+
+      &:last-child {
+        margin-bottom: 40px;
+      }
+    }
+  }
 }

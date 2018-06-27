@@ -1,3 +1,17 @@
-:host {
+@import '../colors.scss';
 
+:host {
+  .mg-app {
+    height: 100vh;
+    overflow: hidden;
+
+    .content {
+      overflow-x: hidden;
+      overflow-y: scroll;
+      height: 100vh;
+      transform-origin: top left;
+      transition: transform .7s $snap;
+      background-color: $whitey;
+    }
+  }
 }

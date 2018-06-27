@@ -1,13 +1,20 @@
-<div class="container">
-  <mg-navigation (languageChanged)="languageChanged($event)"></mg-navigation>
+<div class="mg-app">
+  <mg-navigation
+    (languageChanged)="languageChanged($event)"
+    (menuOpened)="menuOpened($event)">
+  </mg-navigation>
 
-  <mg-header></mg-header>
+  <div [@menuOpen]="isMenuOpen" class="content">
+    <div class="container">
+      <mg-header></mg-header>
 
-  <mg-description></mg-description>
+      <mg-description></mg-description>
 
-  <mg-projects></mg-projects>
+      <mg-projects></mg-projects>
 
-  <mg-contact></mg-contact>
+      <mg-contact></mg-contact>
 
-  <mg-footer></mg-footer>
+      <mg-footer></mg-footer>
+    </div>
+  </div>
 </div>

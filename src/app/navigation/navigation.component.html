@@ -1,4 +1,15 @@
 <div class="row">
-  <div (click)="toggleLanguage()">{{language}}</div>
-  navigation works!
+  <span class="menu_toggle"
+        (click)="toggleMenu()">
+    <div [@menuOpen]="isMenuOpen" class="menu_button menu_open fa fa-bars"></div>
+    <div [@menuClose]="isMenuOpen" class="menu_button menu_close fa fa-times"></div>
+  </span>
+
+  <ul [@listOpen]="isMenuOpen" class="menu_items">
+    <li><a routerLink="header">{{ 'Header' | translate }}</a></li>
+    <li><a href="#">{{ 'Description' | translate }}</a></li>
+    <li><a href="#">{{ 'Projects' | translate}}</a></li>
+    <li><a href="#">{{ 'Contact' | translate}}</a></li>
+    <li><a href="#">{{ 'Footer' | translate}}</a></li>
+  </ul>
 </div>
